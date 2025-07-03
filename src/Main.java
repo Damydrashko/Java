@@ -23,11 +23,7 @@ public class Main
 
         Planete pe = new Planete();
 
-        pe.Nom= "Venus";
-        pe.Diametre= 500;
-        pe.Matiere="Gazeuse";
 
-        System.out.printf("Le diametre de la planete %s qui est une planète %s est de %d",pe.Nom,pe.Matiere,pe.Diametre);
 
         // </editor-fold>
     }
