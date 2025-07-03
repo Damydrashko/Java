@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main
@@ -19,10 +21,14 @@ public class Main
                   <La valeur de la MÊME VARIABLE>
          */
 
-        int nbPlanetes = 8 ;
-        System.out.println("Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de : " +nbPlanetes +".");
-        nbPlanetes = 9;
-        System.out.println("Il y a quelques années cependant, elles étaient au nombre de : " +nbPlanetes +".");
+        Planete pe = new Planete();
+
+        pe.Nom= "Venus";
+        pe.Diametre= 500;
+        pe.Matiere="Gazeuse";
+
+        System.out.printf("Le diametre de la planete %s qui est une planète %s est de %d",pe.Nom,pe.Matiere,pe.Diametre);
+
         // </editor-fold>
     }
 
