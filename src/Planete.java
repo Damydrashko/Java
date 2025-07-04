@@ -8,6 +8,8 @@ public class Planete {
 
     int Angle;
 
+    int totalVisiteurs;
+
     int CalculerTour (int angle)
     {
         int nbtour;
@@ -29,6 +31,40 @@ public class Planete {
         int nbtour = CalculerTour(p.Angle);
 
         System.out.printf("%s a effectué %d tours complet sur elle-même.",p.Nom,nbtour);
+    }
+
+    void acceuillirVaisseau(int nombreHumaines)
+    {
+        totalVisiteurs = nombreHumaines;
+    }
+
+    void acceuillirVaisseau(String vaisseau)
+    {
+        vaisseau = vaisseau.toUpperCase();
+        switch (vaisseau)
+        {
+            case "CHASSEUR" :
+                totalVisiteurs = totalVisiteurs + 3;
+                break;
+            case "FREGATE" :
+                totalVisiteurs = totalVisiteurs + 12;
+                    break;
+            case "CROISEUR" :
+                totalVisiteurs = totalVisiteurs + 50;
+                break;
+            default:
+                break;
+        }
+    }
+
+    void afficherTotalVisiteurs()
+    {
+
+        if(this.totalVisiteurs > 0)
+        {
+            System.out.printf("Le nombre de visiteurs de la planete %s est de %d ",this.Nom,this.totalVisiteurs);
+        }
+
     }
 
 

@@ -14,14 +14,14 @@ public class Main
     {
         // <editor-fold defaultstate="Collapsed" desc="Exo 1">
 
-        /**
-         * Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de :
-                   <La valeur d'une variable de type int >
-                   Il y a quelques années cependant, elles étaient au nombre de :
-                  <La valeur de la MÊME VARIABLE>
-         */
-
         Planete pe = new Planete();
+        pe.Nom  = "Venus";
+        pe.Angle = -3542;
+        pe.rotation(pe);
+
+
+        pe.afficherTotalVisiteurs();
+
 
 
 
