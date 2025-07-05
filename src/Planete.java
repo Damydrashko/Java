@@ -10,6 +10,8 @@ public class Planete {
 
     int totalVisiteurs;
 
+    Atmosphere atmosphere;
+
     int CalculerTour (int angle)
     {
         int nbtour;
@@ -33,9 +35,9 @@ public class Planete {
         System.out.printf("%s a effectué %d tours complet sur elle-même.",p.Nom,nbtour);
     }
 
-    void acceuillirVaisseau(int nombreHumaines)
+    void acceuillirVaisseau(int nombreHumains)
     {
-        totalVisiteurs = nombreHumaines;
+        totalVisiteurs = totalVisiteurs+ nombreHumains;
     }
 
     void acceuillirVaisseau(String vaisseau)

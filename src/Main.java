@@ -22,8 +22,19 @@ public class Main
 
         pe.afficherTotalVisiteurs();
 
+        Atmosphere a = new Atmosphere();
+        a.tauxSodium = 8.896f;
+        a.tauxArgon = 8;
+        a.tauxAzote =99;
+        a.tauxDioxyde = 88;
+        a.tauxHelium =72.45f;
+        a.tauxHydrogene =12;
 
 
+        pe.atmosphere = a;
+
+
+        System.out.printf("le taux d'atmosphère de sodium de la plante %s est de %.4f %%",pe.Nom,pe.atmosphere.tauxSodium);
 
         // </editor-fold>
     }
