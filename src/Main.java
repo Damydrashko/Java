@@ -14,13 +14,13 @@ public class Main
     {
         // <editor-fold defaultstate="Collapsed" desc="Exo 1">
 
-        Planete pe = new Planete();
-        pe.Nom  = "Venus";
-        pe.Angle = -3542;
-        pe.rotation(pe);
+        Planete venus = new Planete();
+        venus.Nom  = "Venus";
+        venus.Angle = -3542;
+        venus.rotation(venus);
 
 
-        pe.afficherTotalVisiteurs();
+        venus.afficherTotalVisiteurs();
 
         Atmosphere a = new Atmosphere();
         a.tauxSodium = 8.896f;
@@ -31,10 +31,13 @@ public class Main
         a.tauxHydrogene =12;
 
 
-        pe.atmosphere = a;
+        venus.atmosphere = a;
 
-
-        System.out.printf("le taux d'atmosphère de sodium de la plante %s est de %.4f %%",pe.Nom,pe.atmosphere.tauxSodium);
+        System.out.printf("Le taux d'atopshère de la planète %s est composé de :",venus.Nom);
+        System.out.printf("le taux de sodium est de %.4f %%",venus.atmosphere.tauxSodium);
+        System.out.printf("le taux de d'argon est de %.4f %%",venus.atmosphere.tauxArgon);
+        System.out.printf("le taux d'azote est de %.4f %%",venus.atmosphere.tauxAzote);
+        System.out.printf("le taux de dioxyde est de %.4f %%",venus.atmosphere.tauxSodium);
 
         // </editor-fold>
     }

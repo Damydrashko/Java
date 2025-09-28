@@ -35,10 +35,15 @@ public class Planete {
         System.out.printf("%s a effectué %d tours complet sur elle-même.",p.Nom,nbtour);
     }
 
+    /**
+     *
+     * @param nombreHumains reference le nombre d'humains du vaisseau
+     */
     void acceuillirVaisseau(int nombreHumains)
     {
         totalVisiteurs = totalVisiteurs+ nombreHumains;
     }
+
 
     void acceuillirVaisseau(String vaisseau)
     {
