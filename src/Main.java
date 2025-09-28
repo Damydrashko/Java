@@ -33,11 +33,14 @@ public class Main
 
         venus.atmosphere = a;
 
-        System.out.printf("Le taux d'atopshère de la planète %s est composé de :",venus.Nom);
-        System.out.printf("le taux de sodium est de %.4f %%",venus.atmosphere.tauxSodium);
-        System.out.printf("le taux de d'argon est de %.4f %%",venus.atmosphere.tauxArgon);
-        System.out.printf("le taux d'azote est de %.4f %%",venus.atmosphere.tauxAzote);
-        System.out.printf("le taux de dioxyde est de %.4f %%",venus.atmosphere.tauxSodium);
+        System.out.printf("Le taux d'atopshère de la planète %s est composé de : \n",venus.Nom);
+        System.out.printf("le taux de sodium est de %.2f %% \n",venus.atmosphere.tauxSodium);
+        System.out.printf("Le taux de d'argon est de %.2f %% \n",venus.atmosphere.tauxArgon);
+        System.out.printf("le taux d'azote est de %.2f %% \n",venus.atmosphere.tauxAzote);
+        System.out.printf("le taux de dioxyde est de %.2f %% \n",venus.atmosphere.tauxDioxyde);
+        System.out.printf("le taux de d'helium est de %.2f %% \n",venus.atmosphere.tauxHelium);
+        System.out.printf("le taux de d'hydrogene est de %.2f %% \n",venus.atmosphere.tauxHydrogene);
+
 
         // </editor-fold>
     }
