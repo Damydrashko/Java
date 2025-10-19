@@ -12,6 +12,22 @@ public class Planete {
 
     Atmosphere atmosphere;
 
+    Vaisseau vaisseauActuellementAccoste;
+
+    String Forme = "Sphérique";
+
+    int NbPlanetesDecouvertes = 0;
+
+    Planete()
+    {
+        NbPlanetesDecouvertes++;
+        System.out.printf("Le nombre de planète découverte est de : %d",NbPlanetesDecouvertes);
+    }
+
+    Planete(String Nom)
+    {
+        this.Nom = Nom;
+    }
     int CalculerTour (int angle)
     {
         int nbtour;
@@ -35,46 +51,55 @@ public class Planete {
         System.out.printf("%s a effectué %d tours complet sur elle-même.",p.Nom,nbtour);
     }
 
+
     /**
      *
-     * @param nombreHumains reference le nombre d'humains du vaisseau
+     * @param vaisseau
      */
-    void acceuillirVaisseau(int nombreHumains)
+    void acceuillirVaisseau(Vaisseau vaisseau)
     {
-        totalVisiteurs = totalVisiteurs+ nombreHumains;
-    }
 
-
-    void acceuillirVaisseau(String vaisseau)
-    {
-        vaisseau = vaisseau.toUpperCase();
-        switch (vaisseau)
+        totalVisiteurs = totalVisiteurs+ vaisseau.m_NombrePassager;
+        if(vaisseauActuellementAccoste == null)
         {
-            case "CHASSEUR" :
-                totalVisiteurs = totalVisiteurs + 3;
-                break;
-            case "FREGATE" :
-                totalVisiteurs = totalVisiteurs + 12;
-                    break;
-            case "CROISEUR" :
-                totalVisiteurs = totalVisiteurs + 50;
-                break;
-            default:
-                break;
+            System.out.print("\n Actuellement, aucun passager n'a accosté sur cette planète");
         }
+        else{
+            System.out.println("\nUn vaisseau  de type "+vaisseauActuellementAccoste.m_TypeVaisseau +" doit s'en aller");
+        }
+        vaisseauActuellementAccoste = vaisseau;
+
     }
 
-    void afficherTotalVisiteurs()
+
+     void afficherTotalVisiteurs()
     {
 
         if(this.totalVisiteurs > 0)
         {
-            System.out.printf("Le nombre de visiteurs de la planete %s est de %d ",this.Nom,this.totalVisiteurs);
+            System.out.printf("\n Le nombre de visiteurs de la planete %s est de %d ",this.Nom,this.totalVisiteurs);
+        }
+        else
+        {
+            System.out.printf("\n La planète %s n'acceuille pas de passager",this.Nom);
         }
 
     }
 
 
+    static String expansion(double distance)
+    {
+        String phrase = null;
+        if (distance < 14)
+        {
+            phrase = "Oh lala mais c'est super rapide !";
+        }
+        else
+        {
+            phrase = "Je rêve ou c'est plus rapide que la lulmière ?";
+        }
+        return phrase;
+    }
 
 }
 

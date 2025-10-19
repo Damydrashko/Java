@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main
@@ -14,32 +12,19 @@ public class Main
     {
         // <editor-fold defaultstate="Collapsed" desc="Exo 1">
 
-        Planete venus = new Planete();
-        venus.Nom  = "Venus";
-        venus.Angle = -3542;
-        venus.rotation(venus);
-
-
-        venus.afficherTotalVisiteurs();
-
-        Atmosphere a = new Atmosphere();
-        a.tauxSodium = 8.896f;
-        a.tauxArgon = 8;
-        a.tauxAzote =99;
-        a.tauxDioxyde = 88;
-        a.tauxHelium =72.45f;
-        a.tauxHydrogene =12;
-
-
-        venus.atmosphere = a;
-
-        System.out.printf("Le taux d'atopshère de la planète %s est composé de : \n",venus.Nom);
-        System.out.printf("le taux de sodium est de %.2f %% \n",venus.atmosphere.tauxSodium);
-        System.out.printf("Le taux de d'argon est de %.2f %% \n",venus.atmosphere.tauxArgon);
-        System.out.printf("le taux d'azote est de %.2f %% \n",venus.atmosphere.tauxAzote);
-        System.out.printf("le taux de dioxyde est de %.2f %% \n",venus.atmosphere.tauxDioxyde);
-        System.out.printf("le taux de d'helium est de %.2f %% \n",venus.atmosphere.tauxHelium);
-        System.out.printf("le taux de d'hydrogene est de %.2f %% \n",venus.atmosphere.tauxHydrogene);
+        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        chasseur.m_Blindage = 156;
+        chasseur.m_resistanceDuBouclier=2;
+        chasseur.m_TypeVaisseau ="Chasseur";
+        Vaisseau vaisseau = new Vaisseau();
+        vaisseau.m_Blindage=4784;
+        vaisseau.m_resistanceDuBouclier=30;
+        vaisseau.m_TypeVaisseau ="Vaisseau monde";
+        vaisseau.activerBouclier(vaisseau);
+        chasseur.activerBouclier(chasseur);
+        chasseur.attaque(vaisseau,"laser photonique",3);
+        vaisseau.desactiverBouclier(vaisseau);
+        System.out.println("La résistance du bouclier du vaisseau monde est de "+vaisseau.m_resistanceDuBouclier+".");
 
 
         // </editor-fold>
