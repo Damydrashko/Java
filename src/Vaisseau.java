@@ -1,4 +1,4 @@
-public class Vaisseau {
+public abstract class Vaisseau {
 
 
     /**
@@ -22,32 +22,32 @@ public class Vaisseau {
     int m_resistanceDuBouclier;
 
 
-    Vaisseau(String typeDuVaisseau)
-    {
-        m_TypeVaisseau = typeDuVaisseau;
-    }
+
 
     Vaisseau()
     {
 
     }
-
-    void activerBouclier(Vaisseau vaisseau)
+    public Vaisseau(String typeDuVaisseau,int nbPassager)
     {
-        System.out.println("Activation du bouclier d'un vaisseau de type " +vaisseau.m_TypeVaisseau + ".");
-
-    }
-
-    void desactiverBouclier(Vaisseau vaisseau) {
-        System.out.println("Désactivation du bouclier d'un vaisseau de type " + vaisseau.m_TypeVaisseau + ".");
+        m_TypeVaisseau = typeDuVaisseau;
+        m_NombrePassager = nbPassager;
     }
 
 
+     public void ActivationDuBouclier (boolean activer)
+    {
+        if (activer)
+        {
 
+            System.out.println("Activation du bouclier d'un vaisseau de type " +this.m_TypeVaisseau + ".");
+        }
+        else
+        {
+            System.out.println("Désactivation du bouclier d'un vaisseau de type " + this.m_TypeVaisseau + ".");
+        }
 
-
-
-
+    }
 
 
 

@@ -2,8 +2,6 @@ public class Planete {
 
    public String Nom;
 
-    String Matiere;
-
     long Diametre;
 
     int Angle;
@@ -21,13 +19,15 @@ public class Planete {
     Planete()
     {
         NbPlanetesDecouvertes++;
-        System.out.printf("Le nombre de planète découverte est de : %d",NbPlanetesDecouvertes);
+
     }
 
     Planete(String Nom)
     {
         this.Nom = Nom;
     }
+
+
     int CalculerTour (int angle)
     {
         int nbtour;
@@ -52,24 +52,6 @@ public class Planete {
     }
 
 
-    /**
-     *
-     * @param vaisseau
-     */
-    void acceuillirVaisseau(Vaisseau vaisseau)
-    {
-
-        totalVisiteurs = totalVisiteurs+ vaisseau.m_NombrePassager;
-        if(vaisseauActuellementAccoste == null)
-        {
-            System.out.print("\n Actuellement, aucun passager n'a accosté sur cette planète");
-        }
-        else{
-            System.out.println("\nUn vaisseau  de type "+vaisseauActuellementAccoste.m_TypeVaisseau +" doit s'en aller");
-        }
-        vaisseauActuellementAccoste = vaisseau;
-
-    }
 
 
      void afficherTotalVisiteurs()
